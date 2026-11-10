@@ -1,0 +1,19 @@
+# Python & Jupyter
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.env.*
+.DS_Store
+.vscode/
+# Local, downloaded UCI data (downloaded through scripts/download_data.py)
+data/*.csv
+data/*.zip
+# Generated notebook runs, reports and figures
+outputs/
+# Avoid accidentally committing private notebooks and assessment artifacts
+*private*
+*.eml
