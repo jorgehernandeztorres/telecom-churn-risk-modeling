@@ -4,9 +4,9 @@
 
 **Python · pandas · scikit-learn · Supervised Classification · Cross-Validation · Model Evaluation · Risk Ranking**
 
-This portfolio project investigates whether customer activity observed during the first **nine months** can help rank customers who will churn by month **twelve**. It studies model discrimination, uncertainty, data leakage, and the limitations of using a predicted risk score to prioritize a fixed number of customer reviews.
+This self-directed portfolio project investigates whether customer activity observed during the first **nine months** can help rank customers who will churn by month **twelve**. It studies model discrimination, uncertainty, data leakage, and the limitations of using a predicted risk score to prioritize a fixed number of customer reviews.
 
-> **Data disclosure:** This project uses the **real Iranian Churn dataset** from the UCI Machine Learning Repository, not synthetic customers. Data source: [UCI Iranian Churn (dataset 563)](https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset), [DOI 10.24432/C5JW3Z](https://doi.org/10.24432/C5JW3Z), under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). All research questions, code structure, methodological decisions and interpretation in this repository are original to this independent portfolio case study. The original UCI CSV is not redistributed.
+> **Data and project scope:** This is an independent, self-directed portfolio study using the **real Iranian Churn dataset** from the UCI Machine Learning Repository, not synthetic customers. Source: [UCI Iranian Churn (dataset 563)](https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset), [DOI 10.24432/C5JW3Z](https://doi.org/10.24432/C5JW3Z), under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The analysis, code and figures were prepared for this study using the openly available dataset. The full source CSV is not bundled.
 
 ## Why this project?
 
@@ -14,14 +14,12 @@ A binary classification project should demonstrate more than the ability to fit 
 
 The original dataset contains **3,150 rows**, **13 reported input features** and a binary churn target. According to UCI, inputs aggregate the first nine months, and the target indicates churn by the end of 12 months. The documentation states there are no missing values. Source details are in [`DATA_PROVENANCE.md`](DATA_PROVENANCE.md).
 
-## Original research questions
+## Research questions
 
 1. Can operational and usage signals predict future churn **better than a constant-probability baseline**?
 2. How do logistic regression, random forest and histogram gradient boosting compare under **profile-disjoint stratified five-fold cross-validation**?
-3. With a precommitted **15% review capacity**, how concentrated are actual churners among the highest predicted risks?
+3. With a fixed, illustrative **15% review capacity**, how concentrated are actual churners among the highest predicted risks?
 4. How robust are the findings to probability calibration, a near-outcome feature (`Status`), and observational limitations?
-
-These research questions were defined for this independent portfolio study.
 
 ## Methodology
 
@@ -45,7 +43,7 @@ A completed exploratory run on the original UCI CSV revealed **300 duplicate ful
 
 The revised notebook enforces profile-disjoint development/holdout partitions and profile-disjoint cross-validation folds; it also reports conflicting labels for any repeated input profile. The revision was made *after seeing the initial run*, not pre-registered, so even the new holdout is not independent prospective evidence. It is a stronger diagnostic protocol for this single historical dataset.
 
-**Verified results:** The author executed all 15 code cells of the updated notebook with the original UCI dataset using Python 3.13.2. No execution errors were recorded, and the development/holdout split reported **zero identical predictor profiles shared across partitions**. The values below are those of the revised protocol, not the superseded row-wise run. The notebook contains the actual cell outputs and figures.
+**Verified notebook execution:** All 15 code cells of the updated notebook were executed with the original UCI dataset using Python 3.13.2. No execution errors were recorded, and the development/holdout split reported **zero identical predictor profiles shared across partitions**. The values below are those of the revised protocol, not the superseded row-wise run. The notebook contains the actual cell outputs and figures.
 
 | Primary result (profile-disjoint evaluation) | Observed value |
 | --- | ---: |
@@ -155,4 +153,6 @@ telecom-churn-risk-modeling/
 
 The dataset's license does not automatically determine the license of this project's original code. No open-source code license has been selected automatically; the copyright holder may choose one later.
 
-**Project author:** Jorge Hernández Torres. Independent portfolio project; no employer affiliation or endorsement is implied by this study.
+**Project author:** Jorge Hernández Torres. Independent, self-directed portfolio study using public UCI data.
+
+**Development note:** AI tools assisted with code refinement, testing and documentation. The evaluation protocol, results and limitations are documented so that the work can be inspected and reproduced.

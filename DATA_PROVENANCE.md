@@ -21,10 +21,10 @@
 
 **Important caveats:** The source's exact timestamps per customer, sampling design, meaning of non-active `Status` versus `Churn`, formula behind `Customer Value`, and wider population representativeness are not documented sufficiently to support causal or production-deployment claims. We do not assume that contact with a highly ranked customer would prevent churn.
 
-**Independence of the project:** The research questions, notebook text, plots, and model evaluation were authored for this portfolio project using the cited public UCI dataset.
+**Project scope:** This is a self-directed portfolio study based on the cited public UCI dataset. The analysis, code and visualizations were prepared specifically for this repository, with AI assistance for implementation review and documentation. The dataset is attributed to UCI; no claim of field deployment or external validation is made.
 
 ## Exact-profile duplicates and evaluation policy
 
 During the initial execution on original UCI data, 300 rows were exact full-row duplicates, and 365 rows repeated a nine-feature predictor vector (overlapping categories, **not** 665 distinct duplicate rows). This is an observational data-quality finding; these records cannot be assumed to belong to the same person. Nevertheless, the revised public notebook groups records that match on the *exact predictor columns* across all development/holdout and cross-validation splits to limit duplicate-profile overlap. This change was made after an initial, row-wise analysis, and the resulting estimates are exploratory rather than prospective.
 
-No raw records are redistributed by this project. Dataset source licensing is CC BY 4.0, independent of any code-license decision.
+The full source CSV is not bundled. The executed notebook displays a brief preview of three public UCI records; attribution and dataset licensing remain applicable. Dataset source licensing is CC BY 4.0, independent of any code-license decision.
