@@ -14,6 +14,6 @@ data/*.csv
 data/*.zip
 # Generated notebook runs, reports and figures
 outputs/
-# Avoid accidentally committing private notebooks and assessment artifacts
+# Keep local-only notebooks and correspondence out of version control
 *private*
 *.eml
